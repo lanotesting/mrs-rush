@@ -1,0 +1,144 @@
+:root {
+  --vino: rgb(104, 15, 49);
+  --dorado: rgb(239, 210, 127);
+  --blanco: #fff;
+  --negro: #1b1b1b;
+}
+
+/* Generales */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffffea;
+  color: var(--negro);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--vino);
+  font-size: 1rem;
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffffb2 !important;
+}
+
+/* Hero */
+.hero {
+  background: radial-gradient(circle at center,rgb(161, 22, 75) 0%, var(--vino) 70%, rgb(73, 9, 33) 100%);
+  color: var(--blanco);
+  padding: 6rem 1rem;
+  min-height: 90vh;
+}
+
+.hero-text h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.resaltado {
+  color: var(--dorado);
+}
+
+.hero-img {
+  /* width: 100%; */
+  /* max-width: 500px; */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Botón dorado */
+.hero .btn-dorado {
+  background-color: #fff;
+  border-radius: 50px;
+  color: var(--vino);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-dorado:hover {
+  background-color: var(--vino);
+  color: var(--blanco);
+  border: 1px solid var(--dorado);
+}
+
+/* Secciones */
+.section-title {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1rem, 3rem);
+  text-shadow: #000;
+  margin: 3rem 0 2rem;
+  color: var(--vino);
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Botón flotante */
+.btn-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--dorado);
+  color: var(--vino);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.btn-flotante:hover {
+  background-color: var(--vino);
+  color: var(--blanco);
+}
+
+
+
+/* SECTION ABOUT */
+#nosotros{
+  /* background-image: url("../img/about-background2.jpg"); */
+}
+
+
+
+/* SECTION SERVICE */
+#services .card{
+  /* text-shadow: 2px 2px 1px var(--vino); */
+}
+#services img{
+  margin: auto;
+  width: 150px;
+  opacity: 0.85;
+}
+
+#services p{
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--vino);
+  color: var(--blanco);
+  padding: 2rem 0;
+  text-align: center;
+}
