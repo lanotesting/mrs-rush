@@ -127,7 +127,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-#hero .btn-primary {
+#hero .btn{
     background-color: #50051e00;
     border-color: var(--secondary-color);
     color: var(--secondary-color);
@@ -137,7 +137,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-#hero .btn-primary:hover {
+#hero .btn:hover {
     background-color: var(--light-color);
     border-color: #c2185b;
     color: var(--dark-color);
