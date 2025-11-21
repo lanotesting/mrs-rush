@@ -1,0 +1,363 @@
+/* ------------------- VARIABLES GLOBALES ------------------- */
+:root {
+    --primary-color: #961e46; /* Un rosa vibrante, ideal para donas */
+    --secondary-color: #ffe388; /* Un rosa más claro */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --text-color: #555;
+}
+
+/* ------------------- ESTILOS GENERALES ------------------- */
+html {
+    scroll-behavior: smooth; /* Para un desplazamiento suave entre secciones */
+    /* NUEVO: Ajusta el scroll para que la navbar fija no tape el contenido */
+    scroll-padding-top: 80px; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    /* NUEVO: Añade padding superior para evitar que la navbar fija tape el contenido */
+    padding-top: 76px; 
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #961e46;
+}
+.form-control:focus{
+    border: 2px solid var(--primary-color);
+    opacity: 0.75;
+}
+/* ------------------- ESTILOS COLORES ------------------- */
+
+.text-primary{
+    color: var(--primary-color) !important;
+}
+
+.text-secondary{
+    color: var(--secondary-color) !important;
+}
+.btn-primary{
+    background-color: var(--primary-color) !important;
+    border-color: #c2185b;
+}
+
+
+/* ------------------- ESTILOS DE LA NAVBAR (NUEVO) ------------------- */
+#main-navbar {
+    background-color: var(--primary-color) !important; /* Inicialmente transparente */
+    transition: all 0.4s ease-in-out;
+    padding: 1rem 0;
+}
+
+#main-navbar .navbar-brand {
+    color: white;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+    width: 200px;
+}
+
+#main-navbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+#main-navbar .navbar-nav .nav-link .badge{
+    box-shadow: 0px 0px 15px #fae41b;
+}
+
+#main-navbar .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+#main-navbar .navbar-nav .nav-link:hover::after,
+#main-navbar .navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+/* Estilo cuando se hace scroll */
+#main-navbar.scrolled {
+    /* background-color: white !important; */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: #fff !important;
+    padding: 0.5rem 0;
+}
+
+#main-navbar.scrolled .navbar-brand,
+#main-navbar.scrolled .navbar-nav .nav-link {
+    color: var(--light-color);
+}
+#main-navbar.scrolled .navbar-nav .nav-link:hover,
+#main-navbar .navbar-nav .nav-link:hover{
+    color: var(--secondary-color);
+}
+
+/* ------------------- SECCIÓN HERO ------------------- */
+#hero {
+    min-height: 100vh;
+    background: radial-gradient(#d62d65, var(--primary-color), #50051e);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero .hero-text-container {
+    text-align: start;
+}
+
+#hero h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#hero .btn-primary {
+    background-color: #50051e00;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+#hero .btn-primary:hover {
+    background-color: var(--light-color);
+    border-color: #c2185b;
+    color: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Iconos de redes sociales en Hero (Desktop) */
+#social-links-desktop .social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#social-links-desktop .social-icon:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+/* ------------------- SECCIÓN ABOUT ---------------------- */
+#nosotros .services{
+    row-gap: 20px;
+}
+#nosotros .services img{
+  margin: auto;
+  width: 150px;
+  opacity: 0.85;
+}
+
+#nosotros .services p{
+  font-weight: bold;
+}
+
+#nosotros .services .card {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.452);
+  transition: transform 0.3s ease;
+}
+
+#nosotros .services .card:hover {
+  transform: translateY(-5px);
+}
+
+/* ------------------- SECCIÓN CATÁLOGO ------------------- */
+.product-card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* ------------------ SECCIÓN TESTIMONIOS ----------------- */
+#testimonio{
+    background-image: url("img/bg-testimonials.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+#testimonio .carousel-item .avatar,
+#testimonio .carousel-item .small-avatar{
+    border-radius: 100%;
+    border: 3px solid #50051e;
+}
+
+#testimonio .carousel-item .avatar{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+
+}
+#testimonio .carousel-item .small-avatar{
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+/* ------------------- SECCIÓN CONTÁCTO ------------------- */
+#contactanos .form-control {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+#contactanos .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25);
+}
+
+
+
+
+/* ------------------- SECCIÓN CONTÁCTO ------------------- */
+#footer{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+
+/* ------------------- BOTONES FLOTANTES ------------------- */
+.floating-btn {
+    position: fixed;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    width: 55px;
+    height: 55px;
+}
+
+.floating-btn:hover {
+    background-color: #c2185b;
+    transform: scale(1.1);
+    color: white;
+}
+
+/* --- Botón de Subir al Inicio --- */
+#back-to-top {
+    bottom: 30px;
+    right: 30px;
+    z-index: 999; /* Nivel más bajo de los flotantes */
+    display: none; /* Oculto por defecto */
+}
+
+/* --- Botón de Tres Puntos (Móvil) --- */
+#social-toggle {
+    bottom: 90px; /* Separado verticalmente del botón de subir */
+    right: 30px;
+    z-index: 1001; /* Nivel más alto para que siempre sea cliqueable */
+}
+
+/* --- Contenedor de Redes Sociales (Móvil) --- */
+.social-links-mobile {
+    position: fixed;
+    bottom: 150px; /* Se alinea con su botón activador */
+    right: 30px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    z-index: 1000; /* Nivel intermedio */
+}
+
+.social-links-mobile.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.social-links-mobile a {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links-mobile a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+/* Ajustes para que el hero se vea perfecto en móviles */
+@media (max-width: 991.98px) {
+    #main-navbar .navbar-brand{
+        width: 100px;
+    }
+
+    #hero {
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    
+    #hero .hero-image-container img {
+        max-height: 50vh;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #hero .hero-text-container {
+        padding: 2rem 1rem !important;
+    }
+
+    .section-title::after {
+        left: 0;
+        transform: translateX(0);
+    }
+}
