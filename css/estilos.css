@@ -162,11 +162,6 @@ body {
 #nosotros .services{
     row-gap: 20px;
 }
-#nosotros .services img{
-  margin: auto;
-  width: 150px;
-  opacity: 0.85;
-}
 
 #nosotros .services p{
   font-weight: bold;
@@ -182,6 +177,14 @@ body {
 #nosotros .services .card:hover {
   transform: translateY(-5px);
 }
+
+#nosotros .services img{
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  opacity: 0.85;
+}
+
 
 /* ------------------- SECCIÓN CATÁLOGO ------------------- */
 .product-card {
@@ -337,7 +340,7 @@ body {
 /* Ajustes para que el hero se vea perfecto en móviles */
 @media (max-width: 991.98px) {
     #main-navbar .navbar-brand{
-        width: 100px;
+        width: 150px;
     }
 
     #hero {
@@ -360,5 +363,13 @@ body {
         left: 0;
         transform: translateX(0);
     }
+}
 
+@media (max-width: 500px){
+    #hero .hero-text-container {
+        text-align: center;
+    }
+    #hero h1{
+        font-size: 2.5rem;
+    }
 }
