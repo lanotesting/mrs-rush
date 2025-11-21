@@ -209,7 +209,7 @@ body {
 
 /* ------------------ SECCIÓN TESTIMONIOS ----------------- */
 #testimonio{
-    background-image: url("img/bg-testimonials.png");
+    background-image: url("../img/bg-testimonials.png");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;
@@ -360,4 +360,5 @@ body {
         left: 0;
         transform: translateX(0);
     }
+
 }
